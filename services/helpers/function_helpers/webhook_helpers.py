@@ -9,6 +9,7 @@ from media_manager.utils import custom_exceptions as ce
 from services.helpers.query_helpers.webhook_helpers import (
     insert_github_webhook_v1
 )
+import traceback
 
 def save_github_webhook_v1(request):
     try:
@@ -25,8 +26,8 @@ def save_github_webhook_v1(request):
                 messages.stderr.decode('utf-8'), width=1000
             )
             is_deployed = 1
-        except:
-            deploy_details = None
+        except Exception as e:
+            deploy_details = traceback.format_exc()
             is_deployed = 0
 
         webhook_insert_data = {
