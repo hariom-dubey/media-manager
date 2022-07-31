@@ -1,5 +1,5 @@
 from sqlalchemy import Column, Integer, String, TIMESTAMP, text
-from sqlalchemy.dialects.mysql import LONGTEXT
+from sqlalchemy.dialects.mysql import LONGTEXT, TINYINT
 from sqlalchemy.ext.declarative import declarative_base
 
 Base = declarative_base()
@@ -31,5 +31,7 @@ class MediaGithubWebhookLog(Base):
     code = Column(String(36), index=True)
     event = Column(String(36), index=True)
     response = Column(LONGTEXT, nullable=False)
+    is_deployed = Column(TINYINT, nullable=False, server_default=text("'0'"))
+    deploy_messages = Column(LONGTEXT)
     created_on = Column(TIMESTAMP, nullable=False, index=True, server_default=text("CURRENT_TIMESTAMP"))
     updated_on = Column(TIMESTAMP, nullable=False, server_default=text("CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP"))
