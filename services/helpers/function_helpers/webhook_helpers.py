@@ -32,6 +32,7 @@ def save_github_webhook_v1(request):
 
         webhook_insert_data = {
             'code': uuid.uuid4(),
+            'event': 'push',
             'response': json.dumps(request.data),
             'is_deployed': is_deployed,
             'deploy_messages': json.dumps(deploy_details)
