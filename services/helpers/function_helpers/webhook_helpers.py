@@ -17,7 +17,7 @@ def save_github_webhook_v1(request):
         try:
             deploy_details = {}
             messages = run(
-                "deploy_media_manager.sh", stdout=PIPE, stderr=PIPE
+                "/usr/local/bin/deploy_media_manager.sh", stdout=PIPE, stderr=PIPE
             )
             deploy_details['stdout'] = textwrap.fill(
                 messages.stdout.decode('utf-8'), width=1000
