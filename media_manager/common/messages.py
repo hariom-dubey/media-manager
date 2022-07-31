@@ -28,6 +28,7 @@ VERSION_NOT_SUPPORTED = "This version is not supported"
 VALIDATION_FAILED = 'Some Validations have Failed'
 UNKNOWN_COLUMN = 'Unknow Column in Field List'
 INVALID_APPLICATION_ID = 'Application ID does not exists'
+INVALID_SLUG = 'Invalid Slug'
 
 TOKEN_INVALID = 'Invalid Token'
 DECODE_ERROR = 'Header String Manipulated'

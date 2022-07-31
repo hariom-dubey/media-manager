@@ -45,7 +45,8 @@ INSTALLED_APPS = [
     'audio',
     'video',
     'image',
-    'users'
+    'users',
+    'services'
 ]
 
 MIDDLEWARE = [

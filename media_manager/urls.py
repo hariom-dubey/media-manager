@@ -21,5 +21,6 @@ urlpatterns = [
     path('video/', include('video.urls')),
     path('user/', include('users.urls')),
     path('v1/auth/', include(('auth.urls', 'auth'), namespace='v1:auth')),
-    path('v2/auth/', include(('auth.urls', 'auth'), namespace='v2:auth'))
+    path('v2/auth/', include(('auth.urls', 'auth'), namespace='v2:auth')),
+    path('v1/services/', include(('services.urls', 'services'), namespace='v1:services'))
 ]

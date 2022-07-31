@@ -56,3 +56,7 @@ class ResetKeyInvalid(APIException):
     default_detail = messages.USER_NOT_FOUND
     default_code = 'reset_key_invalid'
 
+class InvalidSlug(APIException):
+    status_code = status.HTTP_400_BAD_REQUEST
+    default_detail = messages.INVALID_SLUG
+    default_code = 'invalid_slug'
