@@ -20,8 +20,8 @@ pipeline{
         stage('Setup Nginx'){
             steps {
                 sh '''
-                chmod +x nginx.sh
-                ./nginx.sh
+                chmod +x nginx_bash.sh
+                ./nginx_bash.sh
                 '''
             }
         }
