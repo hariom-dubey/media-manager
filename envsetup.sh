@@ -1,7 +1,5 @@
 #!/bin/bash
 
-cd /var/www/media_manager
-
 echo 'ENV Setup Running Directory'
 echo $PWD
 
