@@ -14,21 +14,24 @@ import traceback
 def save_github_webhook_v1(request):
     try:
 
-        try:
-            deploy_details = {}
-            messages = run(
-                "deploy_media_manager.sh", stdout=PIPE, stderr=PIPE
-            )
-            deploy_details['stdout'] = textwrap.fill(
-                messages.stdout.decode('utf-8'), width=1000
-            )
-            deploy_details['stderr'] = textwrap.fill(
-                messages.stderr.decode('utf-8'), width=1000
-            )
-            is_deployed = 1
-        except Exception as e:
-            deploy_details = traceback.format_exc()
-            is_deployed = 0
+        is_deployed = 0
+        deploy_details = None
+
+        # try:
+        #     deploy_details = {}
+        #     messages = run(
+        #         "deploy_media_manager.sh", stdout=PIPE, stderr=PIPE
+        #     )
+        #     deploy_details['stdout'] = textwrap.fill(
+        #         messages.stdout.decode('utf-8'), width=1000
+        #     )
+        #     deploy_details['stderr'] = textwrap.fill(
+        #         messages.stderr.decode('utf-8'), width=1000
+        #     )
+        #     is_deployed = 1
+        # except Exception as e:
+        #     deploy_details = traceback.format_exc()
+        #     is_deployed = 0
 
         webhook_insert_data = {
             'code': uuid.uuid4(),
