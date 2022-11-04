@@ -31,7 +31,7 @@ def verify_login_v1(request):
             return Response({
                     'success': True,
                     'status_code': status.HTTP_200_OK,
-                    'message':  'Login Successfull',
+                    'message':  'Login Successfull !',
                     'data': None
                 },
                 status=status.HTTP_200_OK
