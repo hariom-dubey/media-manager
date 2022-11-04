@@ -3,6 +3,8 @@
 echo 'Nginx Running Directory'
 echo $PWD
 
+sudo nginx -t
+
 sudo systemctl start nginx
 sudo systemctl enable nginx
 
