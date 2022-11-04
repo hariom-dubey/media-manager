@@ -1,5 +1,7 @@
 #!/bin/bash
 
+cd /var/www/media_manager
+
 if [ -d 'django_env' ]
 then
    echo 'Python virtual environment exists'
