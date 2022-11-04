@@ -1,5 +1,8 @@
 #!/bin/bash
 
+echo 'Initial Directory'
+echo $PWD
+
 cd /var/www/media_manager
 
 if [ -d 'django_env' ]
@@ -9,6 +12,7 @@ else
     python3 -m venv django_env
 fi
 
+echo 'Project Directory'
 echo $PWD
 
 source django_env/bin/activate
