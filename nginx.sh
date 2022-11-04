@@ -1,5 +1,7 @@
 #!bin/bash
 
+cd /var/www/media_manager
+
 echo 'Nginx Running Directory'
 echo $PWD
 
