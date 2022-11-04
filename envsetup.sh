@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [-d 'django_env']
+if [ -d 'django_env' ]
 then
    echo 'Python virtual environment exists'
 else
@@ -13,7 +13,7 @@ source django_env/bin/activate
 
 pip install -r requirements.txt
 
-if [-d 'logs']
+if [ -d 'logs' ]
 then
    echo 'Log folder exists'
 else
