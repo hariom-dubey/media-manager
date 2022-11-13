@@ -29,7 +29,7 @@ SECRET_KEY = 'b!de&a8wvn*x-ds^)$q9&3foh49jozigaq14o4=x@e2l&-mj-d'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['52.44.247.9', 'apesiron.com', 'www.apesiron.com']
+ALLOWED_HOSTS = ['apesiron.com', 'www.apesiron.com']
 
 
 # Application definition
