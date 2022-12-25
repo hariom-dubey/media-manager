@@ -1,6 +1,6 @@
 from django.urls import path
-from .views import video_download
+from video.apiviews.documents import Documents
 
 urlpatterns = [
-    path('download', video_download, name='video-download'),
+    path('document/download', Documents.as_view(), name='document-download'),
 ]
