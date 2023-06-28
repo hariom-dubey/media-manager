@@ -3,14 +3,14 @@
 echo 'ENV Setup Running Directory'
 echo $PWD
 
-if [ -d 'django_env' ]
+if [ -d 'env' ]
 then
    echo 'Python virtual environment exists'
 else
-    python3 -m venv django_env
+    python3 -m venv env
 fi
 
-source django_env/bin/activate
+source env/bin/activate
 
 pip install -r requirements.txt
 
